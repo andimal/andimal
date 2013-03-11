@@ -1,0 +1,227 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font-family: "MetaPro";
+  font-size: 100%;
+  color: white; }
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  width: 400px; }
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 10px; }
+
+h3 {
+  font-size: 1.8em;
+  padding: 10px 0;
+  text-align: right; }
+
+section {
+  position: relative;
+  width: 100%; }
+
+.about, .me {
+  background-color: #231f20; }
+
+.title {
+  padding: 20px 0px;
+  margin-left: 60px; }
+
+.contact {
+  position: absolute;
+  right: 60px;
+  bottom: 20px; }
+
+.info {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #231f20; }
+
+.pics {
+  position: relative;
+  width: 100%;
+  height: 679px;
+  background-color: #CCC; }
+
+.about {
+  padding: 60px; }
+  .about .text {
+    width: 50%;
+    float: left;
+    padding-right: 20px; }
+    .about .text h4 {
+      font-size: 1.7em;
+      font-weight: bold;
+      border-bottom: 1px solid white;
+      padding-bottom: 15px;
+      margin-bottom: 15px; }
+    .about .text p {
+      font-size: 1.2em;
+      line-height: 1.7em; }
+  .about .tile {
+    width: 25%;
+    height: 250px;
+    float: left;
+    padding: 10px;
+    position: relative;
+    cursor: pointer; }
+    .about .tile .tile-inner {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      background-color: #D1C6C6;
+      color: #231f20;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      -ms-border-radius: 4px;
+      -o-border-radius: 4px;
+      border-radius: 4px;
+      border: 2px solid white; }
+      .about .tile .tile-inner img {
+        width: 100%;
+        position: relative; }
+      .about .tile .tile-inner p {
+        font-size: 1.3em;
+        padding: 20px;
+        line-height: 1.2em; }
+      .about .tile .tile-inner .tile-meta {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(125, 125, 125, 0.9);
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+      .about .tile .tile-inner .tile-over {
+        top: 0;
+        -webkit-transition: all 0.2s;
+        -moz-transition: all 0.2s;
+        -o-transition: all 0.2s;
+        transition: all 0.2s; }
+    .about .tile .recent-play {
+      position: absolute;
+      top: 0;
+      color: white;
+      font-size: 1.7em;
+      margin: 10px;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); }
+      .about .tile .recent-play h4 {
+        font-style: italic;
+        font-weight: normal;
+        font-size: .8em; }
+      .about .tile .recent-play p {
+        padding-top: 10px;
+        line-height: 1em; }
+      .about .tile .recent-play .by {
+        font-weight: normal; }
+  .about .tile:after {
+    width: 0;
+    height: 0;
+    border-bottom: 64px solid rgba(0, 0, 0, 0.2);
+    border-left: 64px solid transparent;
+    position: absolute;
+    bottom: 11px;
+    right: 11px;
+    content: ""; }
+  .about .icon-container {
+    width: 0;
+    height: 0;
+    border-bottom: 60px solid white;
+    border-left: 60px solid transparent;
+    position: absolute;
+    z-index: 2;
+    bottom: 11px;
+    right: 11px; }
+  .about .icon {
+    width: 3.75em;
+    height: 3.75em;
+    position: absolute;
+    left: -3.75em;
+    background-image: url(../img/icons.svg);
+    -webkit-background-size: 3.75em 18.75em;
+    -moz-background-size: 3.75em 18.75em;
+    -o-background-size: 3.75em 18.75em;
+    background-size: 3.75em 18.75em;
+    background-repeat: no-repeat; }
+  .about .tumblr .icon {
+    background-position: 0 -3.75em; }
+  .about .twitter .icon {
+    background-position: 0 -7.5em; }
+  .about .rdio .icon {
+    background-position: 0 -11.25em; }
+  .about .strava .icon {
+    background-position: 0 -15em; }
+  .about .strava {
+    width: 50%; }
+  .about .holder {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px; }
