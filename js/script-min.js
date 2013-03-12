@@ -1,1 +1,1 @@
-$(".tile").hover(function(){$(this).find(".tile-meta").toggleClass("tile-over")},function(){$(this).find(".tile-meta").toggleClass("tile-over")});
+$(".tile").hover(function(){$(this).find(".tile-meta").toggleClass("tile-over")},function(){$(this).find(".tile-meta").toggleClass("tile-over")});$(".tile-meta p").fitText();

@@ -16,3 +16,5 @@ $('.tile').hover(function() {
 }, function() {
 	$(this).find('.tile-meta').toggleClass('tile-over');
 });
+
+$('.tile-meta p').fitText();

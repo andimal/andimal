@@ -129,14 +129,17 @@ section {
       height: 100%;
       position: relative;
       overflow: hidden;
-      background-color: #D1C6C6;
+      background-color: #d1c6c6;
       color: #231f20;
+      border: 2px solid white;
+      -webkit-box-shadow: 0 0 20px 0 black;
+      -moz-box-shadow: 0 0 20px 0 black;
+      box-shadow: 0 0 20px 0 black;
       -webkit-border-radius: 4px;
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
       -o-border-radius: 4px;
-      border-radius: 4px;
-      border: 2px solid white; }
+      border-radius: 4px; }
       .about .tile .tile-inner img {
         width: 100%;
         position: relative; }
@@ -146,16 +149,30 @@ section {
         line-height: 1.2em; }
       .about .tile .tile-inner .tile-meta {
         position: absolute;
-        top: 100%;
+        bottom: -120%;
         width: 100%;
-        height: 100%;
-        background-color: rgba(125, 125, 125, 0.9);
+        max-height: 100%;
+        background-color: rgba(255, 255, 255, 0.9);
+        font-weight: bold;
+        color: #231f20;
+        text-align: center;
+        font-size: 1.8em;
+        border-top: 2px solid white;
         -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
         -o-transition: all 0.2s;
-        transition: all 0.2s; }
+        transition: all 0.2s;
+        -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5); }
+        .about .tile .tile-inner .tile-meta p {
+          padding: 20px 20px 10px 20px; }
+        .about .tile .tile-inner .tile-meta .caption {
+          text-align: left;
+          padding-bottom: 0px;
+          color: #594f51; }
       .about .tile .tile-inner .tile-over {
-        top: 0;
+        bottom: 0;
         -webkit-transition: all 0.2s;
         -moz-transition: all 0.2s;
         -o-transition: all 0.2s;
@@ -195,17 +212,6 @@ section {
     z-index: 2;
     bottom: 11px;
     right: 11px; }
-  .about .icon {
-    width: 3.75em;
-    height: 3.75em;
-    position: absolute;
-    left: -3.75em;
-    background-image: url(../img/icons.svg);
-    -webkit-background-size: 3.75em 18.75em;
-    -moz-background-size: 3.75em 18.75em;
-    -o-background-size: 3.75em 18.75em;
-    background-size: 3.75em 18.75em;
-    background-repeat: no-repeat; }
   .about .tumblr .icon {
     background-position: 0 -3.75em; }
   .about .twitter .icon {
@@ -225,3 +231,62 @@ section {
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
     border-radius: 2px; }
+
+.icon {
+  width: 3.75em;
+  height: 3.75em;
+  position: absolute;
+  left: -3.75em;
+  background-image: url(../img/icons.svg);
+  -webkit-background-size: 3.75em 30em;
+  -moz-background-size: 3.75em 30em;
+  -o-background-size: 3.75em 30em;
+  background-size: 3.75em 30em;
+  background-repeat: no-repeat; }
+
+footer {
+  background-color: #d1c6c6;
+  font-size: 1.5em;
+  width: 100%;
+  height: 3em;
+  border-top: 2px solid #dddddd;
+  padding: 0 0.425em; }
+  footer .icon-container {
+    float: left;
+    height: 100%;
+    cursor: pointer;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  footer .icon-container:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s; }
+  footer .icon {
+    position: relative;
+    float: left;
+    left: auto;
+    width: 1.3em;
+    height: 1.3em;
+    background-position: -2.1em -2.1em;
+    margin: 0.85em 0.425em; }
+  footer .email {
+    background-position: -1.5em -20.66em;
+    width: 1.82em; }
+  footer .github {
+    background-position: -2.1em -24.65em; }
+  footer .twitter {
+    background-position: -2.1em -9.62em; }
+  footer .tumblr {
+    background-position: -2.1em -5.86em; }
+  footer .rdio {
+    background-position: -2.1em -13.38em; }
+  footer p {
+    float: right;
+    margin-right: .625em;
+    line-height: 3em;
+    font-weight: bold;
+    color: #404040; }
