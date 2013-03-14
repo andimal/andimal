@@ -49,6 +49,11 @@ h3 {
 	text-align: right;
 }
 
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
 section {
 	position: relative;
 	width: 100%;
@@ -66,11 +71,18 @@ section {
 
 .contact {
 	position: absolute;
-	right: 60px;
+	right: 40px;
 	bottom: 20px;
 
 	.pair {
-		padding: 10px 0;
+		padding: 10px 20px;
+		@include transition;
+	}
+
+	.pair:hover {
+		background-color: #333;
+		cursor: pointer;
+		@include transition;
 	}
 
 	h3, .icon-twitter, .icon-mail {
@@ -97,7 +109,7 @@ section {
 }
 
 .me {
-
+	border-bottom: 1px solid #111;
 }
 
 .pics {
@@ -107,8 +119,14 @@ section {
 	background-color: #CCC;
 }
 
+.icon {
+	color: $gray;
+	}
+
 .about {
 	padding: 60px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #111;
 
 	.text {
 		width: 50%;
@@ -242,6 +260,14 @@ section {
 		right: 11px;
 	}
 
+	.icon {
+		color: $gray;
+		font-size: 1.3em;
+		position: absolute;
+		left: -27px;
+		top: 34px;
+	}
+
 	.tumblr .icon {
 		background-position: 0 -3.75em;
 	}
@@ -270,10 +296,6 @@ section {
 	}
 }
 
-.icon {
-	color: $gray;
-}
-
 $footer-icon-base	: 1.5em;
 $footer-icon-size	: 1.3em;
 $footer-height		: $footer-icon-base * 2;
@@ -285,6 +307,8 @@ footer {
 	border-top: 2px solid #DDD;
 	padding: 2em 0;
 	text-align: center;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	filter: dropshadow(color=#FFF, offx=1, offy=1);
 
 	p {
 		color: $gray;
@@ -305,12 +329,32 @@ footer {
 		display: inline;
 		font-size: 1.5em;
 		padding: 0 .75em;
+		@include transition;
 	}
 
-	.icon-mail {
+	ul .icon:hover {
+		color: lighten($dark, 40%);
+		@include transition;
+	}
+
+	.mail {
 		font-size: 1.2em;
 		position: relative;
 		top: -2px;
+	}
+
+	.sign-off {
+
+		div {
+			padding-right: .3em;
+			color: #666;
+		}
+
+		p {
+			position: relative;
+			top: -.3em;
+			color: #666;
+		}
 	}
 }
 
@@ -344,7 +388,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
-.icon-twitter:before, .icon-twitter-2:before, .icon-tumblr:before, .icon-tumblr-2:before, .icon-github:before, .icon-instagram:before, .icon-rdio:before, .icon-bike:before, .icon-andy_logo:before, .icon-mail:before, .icon-dribbble:before {
+footer .icon, .icon-twitter:before, .icon-twitter-2:before, .icon-tumblr:before, .icon-tumblr-2:before, .icon-github:before, .icon-instagram:before, .icon-rdio:before, .icon-bike:before, .icon-andy-logo:before, .icon-mail:before, .icon-dribbble:before {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -378,8 +422,8 @@ you can use the generic selector below, but it's slower:
 .icon-bike:before {
 	content: "\62";
 }
-.icon-andy_logo:before {
-	content: "\26";
+.icon-andy-logo:before {
+	content: "\61";
 }
 .icon-mail:before {
 	content: "\6d";
