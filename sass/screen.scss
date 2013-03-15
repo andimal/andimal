@@ -55,24 +55,27 @@ a {
 }
 
 section {
+	@extend .group;
 	position: relative;
 	width: 100%;
-	// padding: 60px;
+	border-bottom: 1px solid #111;
 }
 
-.about, .me {
+.about, .work {
 	background-color: $dark;
 }
 
 .title {
 	padding: 20px 0px;
 	margin-left: 60px;
+	float: left;
 }
 
 .contact {
+	float: right;
 	position: absolute;
-	right: 40px;
-	bottom: 20px;
+	right: 60px;
+	bottom: 10px;
 
 	.pair {
 		padding: 10px 20px;
@@ -98,34 +101,50 @@ section {
 	.icon-mail {
 		margin-left: 18px;
 		font-size: 1.3em;
+		position: relative;
+		top: 2px;
 	}
 }
 
 .info {
-	position: absolute;
-	bottom: 0;
+	position: relative;
 	width: 100%;
 	background-color: $dark;
 }
 
-.me {
-	border-bottom: 1px solid #111;
-}
-
-.pics {
-	position: relative;
-	width: 100%;
-	height: 679px;
-	background-color: #CCC;
-}
-
 .icon {
 	color: $gray;
+}
+
+.work {
+	background-color: $redtint;
+
+	article {
+		float: left;
+		width: 50%;
+		border: 1px solid $gray;
+		font-size: 1.3em;
+		padding: 40px 60px;
+		@include transition;
+
+		.icon, .content {
+			float: left;
+		}
+
+		.icon {
+			padding-right: 40px;
+		}
 	}
+
+	article:hover {
+		background-color: rgba(40,40,40,0.1);
+		@include transition;
+	}
+}
 
 .about {
 	padding: 60px;
-	border-top: 1px solid #333;
+	// border-top: 1px solid #333;
 	border-bottom: 1px solid #111;
 
 	.text {
