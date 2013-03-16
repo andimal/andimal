@@ -123,19 +123,22 @@ section {
 .info {
   position: relative;
   width: 100%;
-  background-color: #231f20; }
+  background-color: #231f20;
+  border-bottom: 2px solid #dddddd;
+  z-index: 2; }
 
 .icon {
   color: #404040; }
 
 .work {
-  background-color: #d1c6c6; }
+  background-color: #d1c6c6;
+  border: 0; }
   .work article {
     float: left;
     width: 50%;
-    border: 1px solid #404040;
-    font-size: 1.3em;
+    font-size: 1.2em;
     padding: 40px 60px;
+    color: #404040;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -143,9 +146,15 @@ section {
     .work article .icon, .work article .content {
       float: left; }
     .work article .icon {
-      padding-right: 40px; }
+      padding-right: 40px;
+      font-size: 2.2em; }
+    .work article h4 {
+      font-weight: bold; }
+    .work article p {
+      margin-top: 10px;
+      font-size: .9em; }
   .work article:hover {
-    background-color: rgba(40, 40, 40, 0.1);
+    background-color: rgba(40, 40, 40, 0.2);
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
@@ -153,7 +162,8 @@ section {
 
 .about {
   padding: 60px;
-  border-bottom: 1px solid #111111; }
+  border-top: 2px solid #dddddd;
+  border-bottom: 2px solid #dddddd; }
   .about .text {
     width: 50%;
     float: left;
