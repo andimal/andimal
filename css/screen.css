@@ -135,21 +135,31 @@ section {
 
 .work {
   background-color: #d1c6c6;
-  border: 0; }
+  border: 0;
+  display: table; }
+  .work .row {
+    display: table-row;
+    position: relative; }
   .work article {
     float: left;
     width: 50%;
+    height: 100%;
+    position: relative;
     font-size: 1.2em;
     padding: 40px 60px;
     color: #404040;
+    display: table-cell;
     -webkit-transition: all 0.2s;
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
     .work article .icon, .work article .content {
-      float: left; }
+      float: left;
+      width: 20%; }
+    .work article .content {
+      width: 80%;
+      line-height: 1.3em; }
     .work article .icon {
-      padding-right: 40px;
       font-size: 2.2em; }
     .work article h4 {
       font-weight: bold; }
