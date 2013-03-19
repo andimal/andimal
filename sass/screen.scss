@@ -7,7 +7,9 @@ $light	: #FFF;
 $shadow	: rgba(0,0,0,0.2);
 $redtint: #D1C6C6;
 
-$font	: "MetaPro";
+$font	: "ff-meta-web-pro",sans-serif;
+$amp	: "swingdancer",cursive;
+$italic	: "atrament-web",sans-serif;
 
 $default-transition-duration	: 0.2s;
 $default-text-shadow-color		: rgba(0,0,0,0.6);
@@ -36,12 +38,15 @@ body {
 h1 {
 	font-size: 4em;
 	font-weight: bold;
-	width: 400px;
 }
 
 h2 {
-	font-size: 1.8em;
-	margin-top: 10px;
+	font-size: 2.5em;
+	font-family: $italic;
+	font-weight: 300;
+	text-transform: uppercase;
+	font-style: italic;
+	margin-top: 8px;
 }
 
 h3 {
@@ -52,6 +57,11 @@ h3 {
 a {
 	color: inherit;
 	text-decoration: none;
+}
+
+.amp {
+	font-family: $amp;
+	font-size: 1em;
 }
 
 section {
@@ -99,10 +109,10 @@ section {
 	}
 
 	.icon-mail {
-		margin-left: 18px;
-		font-size: 1.3em;
+		margin: 0 2px 0 18px;
+		font-size: 1.2em;
 		position: relative;
-		top: 2px;
+		top: 4px;
 	}
 }
 
@@ -124,11 +134,14 @@ section {
 .work {
 	background-color: $redtint;
 	border: 0;
-	display: table;
+
+	.work-link {
+		text-decoration: underline;
+	}
 
 	.row {
-		display: table-row;
 		position: relative;
+		@extend .group;
 	}
 
 	article {
@@ -139,7 +152,7 @@ section {
 		font-size: 1.2em;
 		padding: 40px 60px;
 		color: $gray;
-		display: table-cell;
+		cursor: pointer;
 		@include transition;
 
 		.icon, .content {
@@ -170,6 +183,33 @@ section {
 		background-color: rgba(40,40,40,0.2);
 		@include transition;
 	}
+
+	.blog {
+		@extend .group;
+
+		.icon {
+			width: 9%;
+		}
+
+		article:before {
+			border-top: 1px solid $dark;
+			background-color: $dark;
+			height: 10px;
+			width: 100%;
+			position: absolute;
+			top: 0;
+		}
+
+		article {
+			width: 100%;
+			border-top: 1px solid white;
+		}
+
+		article:hover {
+			background-color: transparent;
+			cursor: default;
+		}
+	}
 }
 
 .about {
@@ -199,6 +239,20 @@ section {
 		p {
 			font-size: 1.2em;
 			line-height: 1.7em;
+		}
+	}
+
+	.right {
+		float: right;
+		width: 50%;
+	}
+
+	.bio-pic {
+		width: 60%;
+		margin-left: 20%;
+
+		img {
+			width: 100%;
 		}
 	}
 
@@ -293,7 +347,11 @@ section {
 		}
 	}
 
-	.tile:after {
+	.rdio .tile-inner p {
+		line-height: 1.2em;
+	}
+
+	/*.tile:after {
 		width: 0; 
 		height: 0; 
 		border-bottom: 64px solid $shadow; 
@@ -302,7 +360,7 @@ section {
 		bottom: 11px;
 		right: 11px;
 		content: "";
-	}
+	}*/
 
 	.icon-container {
 		width: 0; 
@@ -423,7 +481,6 @@ footer {
 	font-style: normal;
 }
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
 	font-family: 'icomoon';
 	content: attr(data-icon);
@@ -435,13 +492,7 @@ footer {
 	-webkit-font-smoothing: antialiased;
 }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-footer .icon, .icon-twitter, .icon-twitter-2, .icon-tumblr, .icon-tumblr-2, .icon-github, .icon-instagram, .icon-rdio, .icon-bike, .icon-andy_logo, .icon-mail, .icon-dribbble, .icon-code, .icon-globe, .icon-thumbs-up, .icon-thumbs-up-2, .icon-id {
+footer .icon, .icon-twitter, .icon-twitter-2, .icon-tumblr, .icon-tumblr-2, .icon-github, .icon-instagram, .icon-rdio, .icon-bike, .icon-andy-logo, .icon-mail, .icon-dribbble, .icon-code, .icon-globe, .icon-thumbs-up, .icon-thumbs-up-2, .icon-id, .icon-command {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -475,7 +526,7 @@ footer .icon, .icon-twitter, .icon-twitter-2, .icon-tumblr, .icon-tumblr-2, .ico
 .icon-bike:before {
 	content: "\62";
 }
-.icon-andy_logo:before {
+.icon-andy-logo:before {
 	content: "\61";
 }
 .icon-mail:before {
@@ -491,11 +542,128 @@ footer .icon, .icon-twitter, .icon-twitter-2, .icon-tumblr, .icon-tumblr-2, .ico
 	content: "\77";
 }
 .icon-thumbs-up:before {
-	content: "\44";
+	content: "\5e";
 }
 .icon-thumbs-up-2:before {
-	content: "\24";
+	content: "\76";
 }
 .icon-id:before {
 	content: "\49";
 }
+.icon-command:before {
+	content: "\43";
+}
+
+/* Responsive */
+@media all and (max-width: 895px) {
+  header {
+  	font-size: .8em;
+  }
+
+  .work {
+  	article {
+  		.icon {
+  			width: 25%;
+  		}
+
+  		.content {
+  			width: 75%;
+  		}
+  	}
+  }
+
+  .about {
+  	.bio-pic {
+  		width: 80%;
+  		margin-left: 10%;
+  	}
+  }
+}
+
+@media all and (max-width: 740px) {
+	header {
+		font-size: .6em;
+	}
+}
+
+@media all and (max-width: 550px) {
+	header {
+		font-size: .6em;
+		text-align: center;
+	}
+
+	.title {
+		width: 100%;
+	}
+
+	.title {
+		margin: 0;
+	}
+
+	.work {
+		article {
+			width: 100%;
+			padding: 20px;
+			border-bottom: 1px solid lighten($dark, 50%);
+
+			.icon {
+	  			width: 20%;
+	  		}
+
+	  		.content {
+	  			width: 80%;
+	  		}
+		}
+	}
+
+	.contact {
+		float: none;
+		position: relative;
+		right: auto;
+		bottom: auto;
+		margin-left: 6%;
+
+	  .pair {
+	  	float: left;
+	  }
+
+	  .icon-twitter, .icon-mail {
+	  	float: left;
+	  	margin: 0 10px 0 0;
+	  }
+
+	  .icon-twitter {
+	  	margin-top: 2px;
+	  }
+	}
+
+	.about .text {
+		width: 100%;
+	}
+
+	.right {
+		display: none;
+	}
+
+	footer {
+		text-align: center;
+
+		ul {
+			width: 60%;
+			margin: 0 auto;
+
+			.icon {
+				line-height: 60px;
+			}
+
+			.tumblr {
+				margin-left: -5px;
+			}
+		}
+
+		.sign-off {
+			margin-top: 40px;
+		}
+	}
+}
+
