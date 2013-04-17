@@ -61,19 +61,19 @@ body {
   clear: both; }
 
 h1 {
-  font-size: 4em;
+  font-size: 3.2em;
   font-weight: bold; }
 
 h2 {
-  font-size: 2.5em;
+  font-size: 2.6em;
   font-family: "atrament-web", sans-serif;
   font-weight: 300;
   text-transform: uppercase;
   font-style: italic;
-  margin-top: 8px; }
+  margin-top: 15px; }
 
 h3 {
-  font-size: 1.8em;
+  font-size: 1.6em;
   text-align: right; }
 
 a {
@@ -101,7 +101,7 @@ section {
   float: right;
   position: absolute;
   right: 60px;
-  bottom: 10px; }
+  bottom: 15px; }
   .contact .pair {
     padding: 10px 20px;
     -webkit-transition: all 0.2s;
@@ -128,7 +128,7 @@ section {
     top: 4px; }
 
 .info {
-  position: relative;
+  position: fixed;
   width: 100%;
   background-color: #231f20;
   border-bottom: 2px solid #dddddd;
@@ -142,7 +142,8 @@ section {
 
 .work {
   background-color: #d1c6c6;
-  border: 0; }
+  border: 0;
+  padding-top: 134px; }
   .work .work-link {
     text-decoration: underline; }
   .work .row {
@@ -179,6 +180,8 @@ section {
     -moz-transition: all 0.2s;
     -o-transition: all 0.2s;
     transition: all 0.2s; }
+  .work .freelance {
+    width: 100%; }
   .work .blog .icon {
     width: 9%; }
   .work .blog article:before {
@@ -480,13 +483,13 @@ footer .icon, .icon-twitter, .icon-twitter-2, .icon-tumblr, .icon-tumblr-2, .ico
   .about .bio-pic {
     width: 80%;
     margin-left: 10%; } }
-@media all and (max-width: 740px) {
-  header {
-    font-size: .6em; } }
-@media all and (max-width: 550px) {
+@media all and (max-width: 730px) {
   header {
     font-size: .6em;
     text-align: center; }
+
+  .info {
+    position: relative; }
 
   .title {
     width: 100%; }
@@ -494,21 +497,24 @@ footer .icon, .icon-twitter, .icon-twitter-2, .icon-tumblr, .icon-tumblr-2, .ico
   .title {
     margin: 0; }
 
-  .work article {
-    width: 100%;
-    padding: 20px;
-    border-bottom: 1px solid #a69b9e; }
-    .work article .icon {
-      width: 20%; }
-    .work article .content {
-      width: 80%; }
+  .work {
+    padding-top: 0; }
+    .work article {
+      width: 100%;
+      padding: 20px;
+      border-bottom: 1px solid #a69b9e; }
+      .work article .icon {
+        width: 20%; }
+      .work article .content {
+        width: 80%; }
 
   .contact {
     float: none;
     position: relative;
     right: auto;
     bottom: auto;
-    margin-left: 6%; }
+    width: 348px;
+    margin: 0 auto; }
     .contact .pair {
       float: left; }
     .contact .icon-twitter, .contact .icon-mail {
